@@ -30,7 +30,7 @@ body{
 
   //header
   header{
-    height: 120px;
+    height: 140px;
     background-color: linear-gradient
   }
 
@@ -40,7 +40,7 @@ body{
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        height: 30px;
+        height: 20px;
         a{
             color: $secondary-color;
             padding: 20px;
@@ -64,8 +64,8 @@ body{
       @include d-flex('standard');
 
       a{
-        padding: 46px 15px;
-        font-size: 0.8em;
+        padding: 40px 15px;
+        font-size: 1em;
         font-weight: 600;
         color: $text-color;
         text-transform: uppercase;
@@ -79,3 +79,135 @@ body{
 
   }
   //header
+
+  //jumbo
+  .jumbo{
+
+    height: 400px;
+    background-image: url('../img/jumbotron.jpg');
+    background-repeat: no-repeat ;
+    background-size: cover;
+    position: relative;
+    top: 0;
+    .btn{
+      @include btn('normal');
+      display: inline-block;
+      position: absolute;
+      bottom: -25px;
+      left: 17.5%;
+    }
+  }
+  //jumbo
+
+
+  //footer
+
+  footer{
+
+    height: calc(100VH - (120px + 140px + 160px));
+
+    .top{
+      height: calc(100% - 100px);
+      background-image: url('../assets/img/footer-bg.jpg') ;
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow: hidden;
+
+        .container{
+          display: flex;
+          justify-content: space-between;
+
+          .logo{
+            height: 500px;
+            width: 600px;
+            background-image: url('../assets/img/dc-logo-bg.png');
+            background-repeat: no-repeat;
+            background-position: 0 -50px ;
+          }
+
+          .links{
+            padding: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 500px;
+            position: relative;
+            top: 0;
+            .link-elements{
+              padding: 0 25px;
+              &:last-child{
+                 position: absolute;
+                 top: 249px;
+              }
+
+              h4{
+                padding-bottom: 1em;
+                color: $secondary-color
+              }
+
+              a{
+                color:  darken($color: $secondary-color, $amount: 50);
+                font-size: .8em;
+                line-height: 2em;
+
+                &:hover{
+                  color: $secondary-color;
+                }
+              }
+
+            }
+
+          }
+        }
+      }
+
+    .bot{
+      height: 100px;
+      background-color: $footer-color ;
+
+      .container{
+        height: 100%;
+        @include d-flex('standard');
+        justify-content: space-between;
+        .btn{
+          color: $secondary-color;
+          padding: 14px 1.2em;
+          border: 2px solid $dc-main-color;
+          cursor: pointer;
+          &:hover{
+            transform: scale(1.05);
+          }
+        }
+
+        .socials{
+          @include d-flex('standard');
+
+          ul{
+            @include d-flex('standard');
+
+            li{
+              padding: 10px;
+
+              img{
+
+                &:hover{
+                  filter: brightness(100);
+                }
+
+              }
+            }
+          }
+
+          h3{
+            margin-right: 20px ;
+            font-size: 1.3em;
+            color:  $dc-main-color;
+          }
+
+
+        }
+      }
+    }
+  }
+
+
+  //footer

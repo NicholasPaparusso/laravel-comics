@@ -16,7 +16,7 @@
 
 @mixin btn($type: 'normal') {
 
-  background-color: $main-color;
+  background-color: $dc-main-color;
   color: $secondary-color;
   text-transform: uppercase;
   cursor: pointer;
