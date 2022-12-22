@@ -64,7 +64,7 @@ body{
       @include d-flex('standard');
 
       a{
-        padding: 40px 15px;
+        padding: 40px 10px;
         font-size: 1em;
         font-weight: 600;
         color: $text-color;
@@ -74,10 +74,29 @@ body{
           border-bottom: 5px solid $dc-main-color;
           color: $dc-main-color;
          }
+         i{
+            color: $dc-main-color;
+         }
       }
     }
 
   }
+
+  form{
+    border-bottom: 2px solid $dc-main-color;
+    width: 120px;
+    display: flex;
+    margin-left: 30px;
+    justify-content: flex-end;
+    align-items: center;
+    height: 30px;
+    input{
+        outline: none ;
+        border: none ;
+        width: 80px;
+      }
+  }
+
   //header
 
   //jumbo
@@ -108,7 +127,7 @@ body{
 
     .top{
       height: calc(100% - 100px);
-      background-image: url('../assets/img/footer-bg.jpg') ;
+      background-image: url('../img/footer-bg.jpg') ;
       background-repeat: no-repeat;
       background-size: cover;
       overflow: hidden;
@@ -120,7 +139,7 @@ body{
           .logo{
             height: 500px;
             width: 600px;
-            background-image: url('../assets/img/dc-logo-bg.png');
+            background-image: url('../img/dc-logo-bg.png');
             background-repeat: no-repeat;
             background-position: 0 -50px ;
           }
@@ -211,3 +230,9 @@ body{
 
 
   //footer
+
+  .test{
+    height: 400px;
+    color: white;
+    background-color: $dc-main-color;
+  }

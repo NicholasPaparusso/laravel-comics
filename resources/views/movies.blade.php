@@ -8,7 +8,7 @@
 
 <div class="test">
     <h1>
-        Home-Page-Test
+       movies
     </h1>
 </div>
 @endsection
