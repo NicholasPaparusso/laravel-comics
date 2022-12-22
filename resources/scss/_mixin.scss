@@ -1,0 +1,29 @@
+
+@mixin d-flex ($type: 'standard'){
+  display: flex;
+
+  @if $type == 'vertical'{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } @else if $type == 'center'{
+    justify-content: center;
+    align-items: center
+  }@else if  $type == 'standard'{
+    align-items: center;
+  }
+}
+
+@mixin btn($type: 'normal') {
+
+  background-color: $main-color;
+  color: $secondary-color;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  @if $type == 'normal'{
+  padding: 10px 25px;
+  }@else if $type =='small'{
+    padding: 10px;
+  }
+}

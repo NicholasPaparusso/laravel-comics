@@ -1,0 +1,81 @@
+@import '~bootstrap/scss/bootstrap';
+@import '/node_modules/@fontsource/el-messiri/400.css';
+@import '/node_modules/@fontsource/el-messiri/500.css';
+@import '/node_modules/@fontsource/el-messiri/600.css';
+@import '/node_modules/@fontsource/el-messiri/700.css';
+@import './variables';
+@import './mixin';
+
+body{
+    font-family: 'El Messiri', sans-serif;
+}
+
+.container{
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  ul, ol{
+    list-style: none;
+  }
+
+  a{
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img{
+    width: 100%;
+  }
+
+  //header
+  header{
+    height: 120px;
+    background-color: linear-gradient
+  }
+
+  .topbar{
+    background-color: $dc-main-color;
+    .container{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 30px;
+        a{
+            color: $secondary-color;
+            padding: 20px;
+            font-size: .7em;
+        }
+    }
+
+    }
+
+
+    header .container{
+    height: 100%;
+    @include d-flex('standard');
+    justify-content: space-between;
+
+    img{
+      width: 80px;
+    }
+
+     ul{
+      @include d-flex('standard');
+
+      a{
+        padding: 46px 15px;
+        font-size: 0.8em;
+        font-weight: 600;
+        color: $text-color;
+        text-transform: uppercase;
+         &:hover,
+         &.active{
+          border-bottom: 5px solid $dc-main-color;
+          color: $dc-main-color;
+         }
+      }
+    }
+
+  }
+  //header
