@@ -64,7 +64,7 @@ body{
       @include d-flex('standard');
 
       a{
-        padding: 40px 10px;
+        padding: 41px 10px;
         font-size: 1em;
         font-weight: 600;
         color: $text-color;
@@ -145,28 +145,29 @@ body{
           }
 
           .links{
-            padding: 20px 0;
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 500px;
             position: relative;
             top: 0;
             .link-elements{
-              padding: 0 25px;
-              &:last-child{
-                 position: absolute;
-                 top: 249px;
-              }
-
+                width: fit-content;
+                padding: 0 50px;
+                &:last-child{
+                    position: absolute;
+                    top: 230px;
+                }
+             ul{
+                padding: 0;
+                }
               h4{
-                padding-bottom: 1em;
-                color: $secondary-color
+                color: $secondary-color;
+                font-size: 1em;
+                padding-top: 20px;
               }
 
               a{
                 color:  darken($color: $secondary-color, $amount: 50);
                 font-size: .8em;
                 line-height: 2em;
+                padding: 0;
 
                 &:hover{
                   color: $secondary-color;
@@ -257,10 +258,15 @@ body{
 
   //card
   .card{
+
+    h4{
+        font-size: 1.1em;
+    }
+
     width: calc((100% / 6) - 20px);
     margin: 10px 10px;
     color: $secondary-color ;
-
+    background: none;
     .image{
       cursor: pointer;
       position: relative;

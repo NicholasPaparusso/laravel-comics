@@ -11,174 +11,24 @@
 <div class="comics">
 
     <div class="container">
-
+        @foreach ($dbcomics as $comic )
         <div class="card">
             <div class="image">
-              <img :src="image" alt="">
-              <div class="info-hidden">
-                <p>Prezzo: </p>
-                <p>Tipologia: </p>
-              </div>
+            <img src="{{$comic['thumb']}}" alt="{{$comic['price']}}">
+            <div class="info-hidden">
+                <p>Prezzo: {{$comic['price']}} </p>
+                <p>Tipologia: {{$comic['type']}}</p>
+            </div>
             </div>
 
             <div class="info">
-              <h4></h4>
+            <h4>{{$comic['title']}}</h4>
             </div>
-          </div>
+        </div>
+        @endforeach
 
-          <div class="card">
-            <div class="image">
-              <img :src="image" alt="">
-              <div class="info-hidden">
-                <p>Prezzo: </p>
-                <p>Tipologia: </p>
-              </div>
-            </div>
 
-            <div class="info">
-              <h4></h4>
-            </div>
-          </div>
 
-          <div class="card">
-            <div class="image">
-              <img :src="image" alt="">
-              <div class="info-hidden">
-                <p>Prezzo: </p>
-                <p>Tipologia: </p>
-              </div>
-            </div>
-
-            <div class="info">
-              <h4></h4>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="image">
-              <img :src="image" alt="">
-              <div class="info-hidden">
-                <p>Prezzo: </p>
-                <p>Tipologia: </p>
-              </div>
-            </div>
-
-            <div class="info">
-              <h4></h4>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="image">
-              <img :src="image" alt="">
-              <div class="info-hidden">
-                <p>Prezzo: </p>
-                <p>Tipologia: </p>
-              </div>
-            </div>
-
-            <div class="info">
-              <h4></h4>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="image">
-              <img :src="image" alt="">
-              <div class="info-hidden">
-                <p>Prezzo: </p>
-                <p>Tipologia: </p>
-              </div>
-            </div>
-
-            <div class="info">
-              <h4></h4>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="image">
-              <img :src="image" alt="">
-              <div class="info-hidden">
-                <p>Prezzo: </p>
-                <p>Tipologia: </p>
-              </div>
-            </div>
-
-            <div class="info">
-              <h4></h4>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="image">
-              <img :src="image" alt="">
-              <div class="info-hidden">
-                <p>Prezzo: </p>
-                <p>Tipologia: </p>
-              </div>
-            </div>
-
-            <div class="info">
-              <h4></h4>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="image">
-              <img :src="image" alt="">
-              <div class="info-hidden">
-                <p>Prezzo: </p>
-                <p>Tipologia: </p>
-              </div>
-            </div>
-
-            <div class="info">
-              <h4></h4>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="image">
-              <img :src="image" alt="">
-              <div class="info-hidden">
-                <p>Prezzo: </p>
-                <p>Tipologia: </p>
-              </div>
-            </div>
-
-            <div class="info">
-              <h4></h4>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="image">
-              <img :src="image" alt="">
-              <div class="info-hidden">
-                <p>Prezzo: </p>
-                <p>Tipologia: </p>
-              </div>
-            </div>
-
-            <div class="info">
-              <h4></h4>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="image">
-              <img :src="image" alt="">
-              <div class="info-hidden">
-                <p>Prezzo: </p>
-                <p>Tipologia: </p>
-              </div>
-            </div>
-
-            <div class="info">
-              <h4></h4>
-            </div>
-          </div>
 
         <div class="btn">
           <h5>load more</h5>

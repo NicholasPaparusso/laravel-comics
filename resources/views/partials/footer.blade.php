@@ -3,16 +3,21 @@
     <div class="top">
 
       <div class="container">
+        <div class="row links">
 
+            @foreach (config('db.links') as $link )
+            <div class="col-4 link-elements">
+                <h4>{{strtoupper($link['title']) }}</h4>
+                <ul>
+                    @foreach ( $link['linkList'] as $linkEl  )
+                    <li><a href="#">{{$linkEl}}</a></li>
+                     @endforeach
+                </ul>
+                </div>
+            @endforeach
 
-        <div class="links">
-          <div class="link-elements">
-            <h4></h4>
-            <ul>
-              <li><a href=""></a></li>
-            </ul>
-          </div>
         </div>
+
 
         <div class="logo"></div>
 

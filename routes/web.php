@@ -21,9 +21,12 @@ Route::get('/characters', function(){
     return view('characters');
 })->name('characters');
 
+
  Route::get('/comics', function(){
-     return view('comics');
+    $dbcomics = config('db.comics');
+     return view('comics', compact('dbcomics'));
  })->name('comics');
+
 
  Route::get('/movies', function(){
     return view('movies');
@@ -57,4 +60,6 @@ Route::get('/shop', function(){
     return view('shop');
 })->name('shop');
 
-
+Route::get('/details', function(){
+    return view('details');
+})->name('details');
