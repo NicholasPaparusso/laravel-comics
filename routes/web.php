@@ -60,6 +60,10 @@ Route::get('/shop', function(){
     return view('shop');
 })->name('shop');
 
-Route::get('/details', function(){
-    return view('details');
+Route::get('/details/ {id}', function($id  = null){
+    $dbcomics = config('db.comics');
+    $get_comic = array_filter($dbcomics, fn ($item) => $item['id'] == $id);
+    $comic = $get_comic[array_key_first($get_comic)];
+    // dd($comic);
+    return view('details', compact('comic'));
 })->name('details');

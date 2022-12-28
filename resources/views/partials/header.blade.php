@@ -14,9 +14,15 @@
             <div class="nav">
                 <ul>
                     @foreach ( config('db.navbar') as $navbarElement )
+                    @if ($loop->last)
+                    <li>
+                        <a class="{{ Route::currentRouteName() === $navbarElement['name'] ? 'active' : '' }}" href="{{route($navbarElement['name'])}}">{{$navbarElement['name']}} <i class="fa-solid fa-caret-down"></i></a>
+                    </li>
+                    @else
                     <li>
                         <a class="{{ Route::currentRouteName() === $navbarElement['name'] ? 'active' : '' }}" href="{{route($navbarElement['name'])}}">{{$navbarElement['name']}}</a>
                     </li>
+                    @endif
                     @endforeach
                 </ul>
                 <form action="">

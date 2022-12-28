@@ -31,7 +31,7 @@ body{
   //header
   header{
     height: 140px;
-    background-color: linear-gradient
+
   }
 
   .topbar{
@@ -257,17 +257,22 @@ body{
   }
 
   //card
-  .card{
+
+
+
+  .np-card{
+
 
     h4{
         font-size: 1.1em;
     }
 
     width: calc((100% / 6) - 20px);
-    margin: 10px 10px;
+    margin: 10px;
     color: $secondary-color ;
     background: none;
     .image{
+      color: $secondary-color;
       cursor: pointer;
       position: relative;
       top: 0;
@@ -299,5 +304,67 @@ body{
       opacity: 0;
     }
   }
+
   //card
   //comics
+
+  //menu
+  .menu{
+    background-color: $dc-main-color ;
+
+
+  .container{
+    height: 160px;
+    @include d-flex('center');
+    gap: 80px;
+    .np-card{
+      @include d-flex('standard');
+
+      img{
+      width: 50px;
+      margin-right: 10px;
+      cursor: pointer;
+
+      &:hover{
+        transform: scale(1.05);
+        transition: all .5s linear;
+      }
+
+      }
+      a{
+        color: $secondary-color;
+        font-size: .9em;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+  //menu
+
+  //details
+
+    .details{
+        min-height: 400px;
+
+    }
+
+    .separator{
+        background-color: $dc-main-color;
+        width: 100%;
+        height: 80px;
+    }
+
+    .jumbo {
+        .image-container{
+            position: absolute;
+            top: 150px;
+            left: 340px;
+            img{
+                width: 200px;
+            }
+        }
+    }
+
+  //details
