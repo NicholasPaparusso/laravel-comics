@@ -21,7 +21,7 @@
         </span>
         <span>Check Availability <i class="fa-solid fa-caret-down"></i> </span>
         <p>
-            {{!! $comic['description'] !!}}
+        {!! $comic['description'] !!}
         </p>
     </div>
 
@@ -37,16 +37,19 @@
 
    <div class="row bottom">
     <div class="col-6">
-        <h3>Talent</h3>
-        <p>Art by: <span> {{ implode(',', $comic['artists']) }}</span></p>
-        <p>Written by: <span> {{ implode(',', $comic['writers']) }}</span></p>
+        <h5>Talent</h5>
+        <div class="row">
+            <p>Art by: <span> {{ implode(',', $comic['artists']) }}</span></p>
+            <p>Written by: <span> {{ implode(',', $comic['writers']) }}</span></p>
+        </div>
+
     </div>
 
     <div class="col-6">
-        <h3>Specs</h3>
+        <h5>Specs</h5>
         <p>Series: <span>{{$comic['series']}}</span></p>
         <p>U.S. Price: <span>{{$comic['price']}}</span></p>
-        <p>On Sale Date <span>{{$comic['sale_date']}}</span></p>
+        <p>On Sale Date: <span>{{$comic['sale_date']}}</span></p>
     </div>
    </div>
 
