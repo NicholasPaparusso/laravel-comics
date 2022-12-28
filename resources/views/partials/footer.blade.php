@@ -35,9 +35,14 @@
           <h3>FOLLOW US</h3>
 
           <ul>
+            @foreach (config('db.socials') as $social )
             <li>
-                <a href="#"></a>
+                <a href="{{$social['href']}}">
+                    <img src="{{Vite::asset('resources/img/')}}{{$social['pic']}}" alt="{{$social['name']}}">
+                </a>
             </li>
+            @endforeach
+
           </ul>
         </div>
 

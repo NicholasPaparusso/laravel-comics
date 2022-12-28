@@ -283,5 +283,39 @@ return [
         [
             'name' => 'shop',
         ],
+    ],
+
+    "socials" => [
+        [
+          "name" => 'facebook',
+          "href" => '#',
+         "pic" => 'footer-facebook.png'
+        ],
+
+        [
+          "name" => 'twitter',
+          "href" => '#',
+         "pic" => 'footer-twitter.png'
+        ],
+
+        [
+          "name" => 'youtube',
+          "href" => '#',
+         "pic" => 'footer-youtube.png'
+        ],
+
+
+        [
+          "name" => 'pinterest',
+          "href" => '#',
+         "pic" => 'footer-pinterest.png'
+        ],
+
+
+        [
+          "name" => 'periscope',
+          "href" => '#',
+         "pic" => 'footer-periscope.png'
+        ],
       ]
 ];
